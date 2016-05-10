@@ -1,7 +1,7 @@
 PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 PATH=$PATH:$HOME/bin
 
-source ./.git-prompt.sh
+source ./git-prompt.sh
 export PS1='\u@\h \W$(__git_ps1 "(%s)") \$ '
 export PYSPARK_PYTHON='/usr/local/bin/python3'
 export HISTSIZE=10000
