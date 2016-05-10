@@ -1,7 +1,8 @@
 PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 PATH=$PATH:$HOME/bin
+PROFILE_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source ./git-prompt.sh
+source $PROFILE_DIRECTORY/git-prompt.sh
 export PS1='\u@\h \W$(__git_ps1 "(%s)") \$ '
 export PYSPARK_PYTHON='/usr/local/bin/python3'
 export HISTSIZE=10000
