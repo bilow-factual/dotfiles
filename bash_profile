@@ -2,8 +2,12 @@ PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 PATH=$PATH:$HOME/bin
 PROFILE_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source $PROFILE_DIRECTORY/git-prompt.sh
-export PS1='\u@\h \W$(__git_ps1 "(%s)") \$ '
+source $PROFILE_DIRECTORY/.git-prompt.sh
+export PS1='\[$(tput bold)\]\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\[$(tput bold)\]\h \[\033[38;5;214m\]\W \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;153m\]$(__git_ps1 "(%s)")\[$(tput sgr0)\]\[$(tput sgr0)\]\$ '
+
+export CLICOLOR=1
+export LSCOLORS=EhFxBxDxBxegedabagacad
+
 export PYSPARK_PYTHON='/usr/local/bin/python3'
 export HISTSIZE=10000
 export HISTFILESIZE=10000
