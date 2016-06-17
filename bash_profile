@@ -17,6 +17,19 @@ alias emacs='emacs -nw'
 alias tmux_h='tmux select-layout even-horizontal'
 alias tmux_v='tmux select-layout even-vertical'
 
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gcm='git commit -m '
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+
+alias got='git '
+alias get='git '
+alias gst='git status'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 alias tabfirstsort='sort -t "	" -k 1 -n'
