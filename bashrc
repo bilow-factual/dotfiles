@@ -154,8 +154,6 @@ alias hdls='hadoop fs -ls -h'
 alias hdpt='hadoop fs -put -f'
 alias bpu='source ~/.bash_profile'
 
-alias nbserve='jupyter notebook --no-browser --port=8888'
-
 alias tabfirstsort='sort -t "	" -k 1 -n'
 alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
 alias whatismyip='curl -s checkip.dyndns.org | grep -Eo [0-9.]+'
@@ -206,13 +204,18 @@ alias harime="ssh -p 42019 bilow-devbox.marathon.la.mesos.factual.com"
 alias aikuro="ssh mbilow@hoffman2.idre.ucla.edu"		
 alias inumuta="ssh user@10.0.201.124"		
 alias gitlab_connect="zerovpn 10.9.0.104 -p 2223 -i ~/.ssh/dev-vpn-key vpn@ec2-54-200-28-156.us-west-2.compute.amazonaws.com"		
+
 nbconnect () {		
   ssh -N -f -L localhost:1738:localhost:8888 bilow@dev		
   open http://localhost:1738		
 }		
+
 nbreconnect () {		
   ps aux | \		
     ni FS fBK. p'r a, join " ", FR 1' rp'b =~ /^ssh -N .*localhost:1738/' \		
     p'$a = a;`kill -9 $a`' | \		
     cat && nbconnect		
 }
+
+alias nbserve='jupyter notebook --no-browser --port=8888'
+
